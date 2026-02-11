@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // رابط قاعدة البيانات - ضع رابطك هنا
-const MONGODB_URI = 'mongodb+srv://admin:MyStore123!@cluster0.xxxxx.mongodb.net/mystore?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // الاتصال بقاعدة البيانات
 mongoose.connect(MONGODB_URI)
